@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid lime; */
+}
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", cursive;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 325px;
+  background-color: var(--very-light-gray);
+  margin: 20px 0 20px 0;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  padding: 50px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sedans h1,
+.suvs h1,
+.luxury h1 {
+  color: var(--very-light-gray);
+  font-family: var(--big-shoulders);
+  font-weight: 700;
+  font-size: 42px;
+}
+.sedans p,
+.suvs p,
+.luxury p {
+  font-family: var(--lexend-deca);
+  font-size: 15px;
+  color: var(--transparent-white);
+  line-height: 26px;
+}
+
+.sedans {
+  background: var(--bright-orange);
+  padding-top: 50px;
+  border-radius: 10px 10px 0 0;
+}
+.suvs {
+  background: var(--dark-cyan);
+}
+.luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+img {
+  height: 40px;
+  width: 65px;
+}
+button {
+  width: 145px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-family: var(--lexend-deca);
+  font-size: 16px;
+}
+.sedans button {
+  color: var(--bright-orange);
+}
+.suvs button {
+  color: var(--dark-cyan);
+}
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+button:hover {
+  color: var(--very-light-gray);
+  background: hsla(0, 0%, 95%, 0);
+  border: 3px solid var(--very-light-gray);
+}
+
+@media only screen and (min-width: 700px) {
+  main {
+    height: 100vh;
+  }
+  .container {
+    width: 920px;
+    display: flex;
+  }
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+}
